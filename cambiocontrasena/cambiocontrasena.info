@@ -1,0 +1,6 @@
+;$id$
+name = Cambio de Clave
+description = "Modificacion para que el usuario solo se le pida la clave nueva al hacer reset password."
+core = 7.x
+version = 1.0 - dev
+package = "bembele"

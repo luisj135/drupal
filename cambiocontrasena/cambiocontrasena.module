@@ -1,0 +1,28 @@
+<?php
+
+/**
+ * Hook_update password
+ * @luisjhoham
+ * 31.octubre-2012
+ * 
+ * solicitado para modificar como los usuarios generan una nueva clave
+ */
+
+
+/**
+ * Implements hook_menu().
+ */
+function bembele_usuarios_reset_menu(){
+	$items['reset'] = array(
+			'title' => t('Cambio Clave'),
+			'description' => t('Cambio de clave'),
+			'page callback' => 'drupal_get_form',
+      'page arguments' => array('cambiocontrasena_form'),
+			'access arguments' => array('access content'),
+      'access callback' => TRUE,
+			'type' => MENU_NORMAL_ITEM,
+			'file' => 'cambiocontrasena.inc',
+	);
+
+	return $items;
+}
